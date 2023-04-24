@@ -1,6 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+Ensure you are using Node 18
+Create this boilerplate by running
+```bash
+npx create-next-app@latest  
+```
+
 
 First, run the development server:
 
