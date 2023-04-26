@@ -1,0 +1,1 @@
+type userType = "admin" | "client";

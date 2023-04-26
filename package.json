@@ -3,10 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "example": "ts-node examples.ts"
   },
   "dependencies": {
     "@types/node": "18.16.0",
@@ -19,7 +16,10 @@
     "postcss": "8.4.23",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "tailwindcss": "3.3.1",
-    "typescript": "5.0.4"
+    "tailwindcss": "3.3.1"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
   }
 }
