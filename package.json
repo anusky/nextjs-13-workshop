@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "example": "ts-node examples.ts"
+    "examples": "ts-node examples.ts"
   },
   "dependencies": {
     "@types/node": "18.16.0",

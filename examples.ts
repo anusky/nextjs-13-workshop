@@ -7,8 +7,18 @@ interface Admin extends Persona {
   code: number;
 }
 
-const welcomeUser = (user: string, userType: userType) => {
-  console.log("User", { user, userType });
+type A = {
+  id: number;
+};
+type B = A & {
+  name: string;
+};
+
+const testA: A = { id: 1 };
+const testB: B = { id: 1, name: "pepito  " };
+
+const welcomeUser = (user: string, type: string) => {
+  console.log("User", { user, type });
 };
 
 const a = welcomeUser("dev", "admin");
@@ -22,9 +32,12 @@ const jefe: Admin = {
   name: "gpa",
 };
 
+/**
+ * Example with data fetches
+ */
 const showUsers = async () => {
   const users = await fetchUsers();
-  console.log(users);
+  // console.log("users", users);
   users.forEach((user) => {
     console.log(user);
   });
@@ -32,6 +45,9 @@ const showUsers = async () => {
 
 showUsers();
 
+/**
+ * Basic TS types
+ */
 type otherType = {
   a: number;
 };
@@ -52,6 +68,10 @@ type types = {
   k: null;
 };
 
+/**
+ * Examples with interfaces
+ */
+
 interface Animal {
   name: string;
   microchip: string;
@@ -61,21 +81,37 @@ interface Dog extends Animal {
   breed: string;
 }
 
+/**
+ * Examples with enums
+ */
+
 enum ContractStatus {
   Permanent, // 0
   Temporary, // 1
   Contractual, // 2
   Apprenticeship, // 3
 }
+enum NewContractStatus {
+  Permanent = 3, // 3
+  Temporary, // 4
+  Contractual, // 5
+  Apprenticeship, // 6
+}
+const contractStatusTemp = ContractStatus.Temporary; // 1
 
+console.log(contractStatusTemp); // 1
+console.log(ContractStatus[contractStatusTemp]); // Temporary
+
+/**
+ * Examples with unknown and any
+ */
 let something: unknown;
 something = 4;
 something = true;
 something = "hola";
 
-something
-  .toUpperCase()(something as string)
-  .toUpperCase();
+// something.toUpperCase();
+// (something as string).toUpperCase();
 
 let anything: any;
 anything = 4;
