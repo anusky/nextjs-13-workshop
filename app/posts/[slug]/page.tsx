@@ -17,8 +17,8 @@ async function ShopItemPage({ params }: PostPageContext) {
       PostItemPage: <pre>{JSON.stringify(params, null, 4)}</pre>
       <GetDate />
       <div className="grid gap-y-4">
-        <Link href={`/all-posts/${params.slug}/comments`}>See comments</Link>
-        <Link href={`/all-posts/${params.slug}/comments-two`}>
+        <Link href={`/posts/${params.slug}/comments`}>See comments</Link>
+        <Link href={`/posts/${params.slug}/comments-two`}>
           See comments two
         </Link>
       </div>
