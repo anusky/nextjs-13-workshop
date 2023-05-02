@@ -23,7 +23,7 @@ export default function RootLayout({
           <div className="">
             <Link href="/posts/1">First Post</Link>
             <Link href="/posts/2">Second Post</Link>
-            <Link href="/all-posts/1">Catch-all Posts</Link>
+            <Link href="/go-catch-em-all/ditto">Catch-em-all Pokémon</Link>
             <Link href="/members">Members</Link>
             <Link href="/error-example">Error example</Link>
             <Link href="/route-handlers">Route handlers</Link>
