@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import swagPhotos from "../photos";
+import swagPhotos from "../../photos";
 
 export default function Home() {
   const photos = swagPhotos;
@@ -9,8 +9,8 @@ export default function Home() {
     <main className="container mx-auto">
       <h1 className="text-center text-4xl font-bold m-10">NextGram</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 auto-rows-max	 gap-6 m-10">
-        {photos.map(({ id, imageSrc }) => (
-          <Link key={id} href={`/photos/${id}`}>
+        {photos.map(({ id, imageSrc }: { id: string; imageSrc: string }) => (
+          <Link key={id} href={`/intercepting/photos/${id}`}>
             <Image
               alt=""
               src={imageSrc}

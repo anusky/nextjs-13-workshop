@@ -54,4 +54,8 @@ body {
   .action-button {
     @apply flex w-fit border-2 border-purple-400 rounded-md px-2 py-1 disabled:bg-purple-950 disabled:text-purple-400 disabled:cursor-not-allowed;
   }
+
+  nav a {
+    @apply hover:text-slate-500;
+  }
 }
