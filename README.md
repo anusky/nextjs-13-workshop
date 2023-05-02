@@ -33,5 +33,15 @@ npm run examples
 ```
 
 
+### Official Typescript courses - FREE
+- [Microsoft official course](https://learn.microsoft.com/es-es/training/paths/build-javascript-applications-typescript/)
+
 ### Add some VCode extensions if you like 
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+- [Pretty Typescript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+
+
+### Notes
+
+- [Ts Cheatsheets](https://www.typescriptlang.org/cheatsheets)
+- 
