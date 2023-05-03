@@ -1,4 +1,4 @@
-import GetDate from "@/app/ components/GetDate";
+import GetDate from "@/app/components/GetDate";
 import Link from "next/link";
 
 const getDate = () =>

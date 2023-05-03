@@ -1,4 +1,4 @@
-import GetDate from "@/app/ components/GetDate";
+import GetDate from "@/app/components/GetDate";
 
 const getDate = () =>
   fetch("http:localhost:3000/api/get-date", {
