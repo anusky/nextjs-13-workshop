@@ -25,3 +25,37 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components {
+  .navbar {
+    @apply bg-slate-100 mx-auto rounded-md px-4 py-2 text-slate-950 justify-between w-fit items-center;
+    @apply grid gap-y-2 md:min-w-fit lg:min-w-[80vw] lg:flex;
+  }
+  .navbar div {
+    @apply flex gap-x-4;
+  }
+  .navbar a {
+    @apply px-2 py-1 rounded-md bg-inherit hover:bg-slate-700 hover:text-white;
+  }
+
+  form {
+    @apply grid gap-y-2 rounded-md border-2 border-purple-400 hover:border-purple-600 p-2;
+  }
+  form input,
+  textarea {
+    @apply bg-transparent ring-slate-600 ring-1 border rounded-md px-2 focus:ring-purple-700 focus:border-purple-700;
+  }
+  form label {
+    @apply inline-flex gap-x-2;
+  }
+  form button {
+    @apply flex w-fit border-2 border-purple-400 rounded-md px-2 py-1;
+  }
+  .action-button {
+    @apply flex w-fit border-2 border-purple-400 rounded-md px-2 py-1 disabled:bg-purple-950 disabled:text-purple-400 disabled:cursor-not-allowed;
+  }
+
+  nav a {
+    @apply hover:text-slate-500;
+  }
+}
