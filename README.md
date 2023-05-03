@@ -45,3 +45,4 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   - `/app/dashboard` - supposed to be dynamic but latest version is loading it statically
   - `/app/posts` - fetch examples to opt into static/dynamic render
   - `/app/albums` - searchParams examples to opt into static/dynamic render
+  - `/app/home` and `/app/get-cookie`- cookies() Dynamic Function usage

@@ -21,9 +21,12 @@ export default function RootLayout({
       <body className={inter.className}>
         <h1>Hola soy GROOT Layout</h1>
         <nav className="navbar">
-          NextJs 13 Workshop
+          NextJs 13 Workshop <Link href="/">Home</Link>
           <div className="">
             <Link href="/users">Users</Link>
+            <Link href="/posts">Posts</Link>
+            <Link href="/dashboard">Dashboard</Link>
+            <Link href="/get-cookie">Get Cookie</Link>
           </div>
         </nav>
         <div className="px-4">
