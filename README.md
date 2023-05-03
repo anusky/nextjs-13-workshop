@@ -41,3 +41,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - Fundamentals are found under `/app/users`
   - Explain issue with ClientComponent -> ServerComponent (infinite loop at the latest version)
   - Explain on older versions router.replace do trigger a hard reload of the page
+- Static & Dynamic rendering
+  - `/app/dashboard` - supposed to be dynamic but latest version is loading it statically
+  - `/app/posts` - fetch examples to opt into static/dynamic render
+  - `/app/albums` - searchParams examples to opt into static/dynamic render
