@@ -1,3 +1,5 @@
+# NextJS 13 Workshop
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -37,7 +39,22 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 ## Latest used version for this workshop session
 > npm i next@13.3.5-canary.2 
 
-## Workshop Session guide
+## Introduction to Typescript
+
+### Official Typescript courses - FREE
+- [Microsoft official course](https://learn.microsoft.com/es-es/training/paths/build-javascript-applications-typescript/)
+
+### Add some VCode extensions if you like 
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+- [Pretty Typescript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
+
+
+### Notes
+
+- [Ts Cheatsheets](https://www.typescriptlang.org/cheatsheets)
+- 
+
+## Workshop 4th Session guide
 - Fundamentals are found under `/app/users`
   - Explain issue with ClientComponent -> ServerComponent (infinite loop at the latest version)
   - Explain on older versions router.replace do trigger a hard reload of the page
