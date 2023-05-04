@@ -1,3 +1,7 @@
+/**
+ * Explain event types depending on component
+ * Explain parent component function types
+ */
 const ComponentParentExample = () => {
   const handleOnClick = () => {};
   return (
@@ -8,7 +12,7 @@ const ComponentParentExample = () => {
 };
 
 const ComponentExample = ({ onClick }: { onClick: () => void }) => {
-  const handleOnClick = (event: MouseEvent) => {
+  const handleOnClick = (event: React.MouseEvent<HTMLDivElement>) => {
     console.log("event", event.currentTarget.textContent);
   };
   return <div onClick={handleOnClick}>ComponentExample</div>;
