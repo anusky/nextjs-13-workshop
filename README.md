@@ -1,3 +1,5 @@
+# NextJS 13 Workshop
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -25,18 +27,39 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 [http://localhost:3000/api/hello](http://localhost:3000/api/hello) is an endpoint that uses [Route Handlers](https://beta.nextjs.org/docs/routing/route-handlers). This endpoint can be edited in `app/api/hello/route.js`.
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+  
 
-## Learn More
+## Typescript - NextJs related issues
+- Trying to load a Server Component on a page will imply an Error telling "'ServerComponentName' cannot be used as a JSX component."
+  - prevent it by adding a ts-expect-error before the line that fails
+   ```jsx 
+   {/* @ts-expect-error Server Component */}
+   <ServerComponentName />
+   ```
+## Latest used version for this workshop session
+> npm i next@13.3.5-canary.2 
 
-To learn more about Next.js, take a look at the following resources:
+## Introduction to Typescript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Official Typescript courses - FREE
+- [Microsoft official course](https://learn.microsoft.com/es-es/training/paths/build-javascript-applications-typescript/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Add some VCode extensions if you like 
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
+- [Pretty Typescript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Notes
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Ts Cheatsheets](https://www.typescriptlang.org/cheatsheets)
+- 
+
+## Workshop 4th Session guide
+- Fundamentals are found under `/app/users`
+  - Explain issue with ClientComponent -> ServerComponent (infinite loop at the latest version)
+  - Explain on older versions router.replace do trigger a hard reload of the page
+- Static & Dynamic rendering
+  - `/app/dashboard` - supposed to be dynamic but latest version is loading it statically
+  - `/app/posts` - fetch examples to opt into static/dynamic render
+  - `/app/albums` - searchParams examples to opt into static/dynamic render
+  - `/app/home` and `/app/get-cookie`- cookies() Dynamic Function usage
