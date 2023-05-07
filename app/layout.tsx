@@ -11,10 +11,8 @@ export const metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: {
   children: React.ReactNode;
-  modal: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -27,12 +25,10 @@ export default function RootLayout({
             <Link href="/posts">Posts</Link>
             <Link href="/dashboard">Dashboard</Link>
             <Link href="/get-cookie">Get Cookie</Link>
+            <Link href="/albums">Albums</Link>
           </div>
         </nav>
-        <div className="px-4">
-          {children}
-          {modal}
-        </div>
+        <div className="px-4">{children}</div>
       </body>
     </html>
   );

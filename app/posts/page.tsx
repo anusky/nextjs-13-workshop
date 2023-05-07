@@ -1,8 +1,6 @@
 // getStaticProps
 const fetchPostListStatic = () =>
-  fetch("https://jsonplaceholder.typicode.com/posts", {}).then((res) =>
-    res.json()
-  );
+  fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json());
 
 // getServerSideProps
 const fetchPostListDynamic = () =>
@@ -17,11 +15,11 @@ const fetchPostListDynamic = () =>
 // ISR --> Incremental Static Regeneration
 const fetchPostListIncreamental = () =>
   fetch("https://jsonplaceholder.typicode.com/posts", {
-    next: { revalidate: 10 },
+    next: { revalidate: 120 },
   }).then((res) => res.json());
 
 const PostsPage = async () => {
-  const postList = await fetchPostListStatic();
+  const postList = await fetchPostListIncreamental();
   return (
     <div>
       <h1>PostsPage</h1>

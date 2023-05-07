@@ -12,6 +12,7 @@ type UserPageProps = {
 const inter = Inter({ subsets: ["latin"] });
 const fetchUserList = () =>
   fetch("https://jsonplaceholder.typicode.com/users").then((res) => res.json());
+
 export default async function UsersPage({ searchParams }: UserPageProps) {
   const userList: MemberListItem[] = await fetchUserList();
   return (
