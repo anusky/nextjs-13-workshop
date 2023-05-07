@@ -63,3 +63,13 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   - `/app/posts` - fetch examples to opt into static/dynamic render
   - `/app/albums` - searchParams examples to opt into static/dynamic render
   - `/app/home` and `/app/get-cookie`- cookies() Dynamic Function usage
+
+## Workshop 5th Session guide
+- Data Fetching types
+  - `/member-profile/1/parallel` - Parallel data fetching
+    - `/member-profile/1/parallel-with-suspense` -  
+  - `/member-profile/1/sequential` -  Sequential data fetching
+- Caching
+  - `/member-profile/1/cache-per-request` -  caching per request and preload pattern with cache()
+- Revalidating
+  - LatestUpdateDate from root layout

@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+import LatestUpdateDate from "./components/LatestUpdateDate";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,6 +16,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // if (process.env.NEXT_PUBLIC_API_MOCKING === "true") {
+  //   import("./mocks").then(({ setupMocks }) => {
+  //     setupMocks();
+  //   });
+  // }
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -25,10 +31,19 @@ export default function RootLayout({
             <Image alt="Logo" src="/yoshi.png" width={50} height={50} />
           </Link>
           <div className="">
-            <Link href="/users">Users</Link>
+            <Link href="/member-profile/1/parallel">Parallel</Link>
+            <Link href="/member-profile/1/parallel-with-suspense">
+              Parallel w suspense
+            </Link>
+            <Link href="/member-profile/1/sequential">Sequential</Link>
+            <Link href="/member-profile/9/cache-per-request">CPR</Link>
           </div>
         </nav>
-        <div className="px-4">{children}</div>
+        <div className="px-4">
+          {/* @ts-expect-error Server Component */}
+          <LatestUpdateDate />
+          {children}
+        </div>
       </body>
     </html>
   );
