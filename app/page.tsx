@@ -1,13 +1,25 @@
+"use client";
 import { Inter } from "next/font/google";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
-// const getCoins = () => fetch("/coins").then((res) => res.json());
-export default async function Home() {
-  // const data = await getCoins();
+export default function Home() {
+  const [reviews, setReviews] = useState([]);
+
+  const handleGetReviews = () => {
+    // Client-side request are mocked by `mocks/browser.ts`.
+    fetch("/reviews")
+      .then((res) => res.json())
+      .then((res) => {
+        setReviews(res);
+      });
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {/* <pre>{JSON.stringify(data, null, 4)}</pre> */}
+      <button onClick={handleGetReviews}>Load reviews</button>
+      <pre>{JSON.stringify(reviews, null, 4)}</pre>
     </main>
   );
 }

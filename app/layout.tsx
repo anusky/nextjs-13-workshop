@@ -1,6 +1,9 @@
 import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
+
+import InitMSWClient from "./components/InitMSWClient";
+import InitMSWServer from "./components/InitMSWServer";
 import LatestUpdateDate from "./components/LatestUpdateDate";
 import "./globals.css";
 
@@ -16,11 +19,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // if (process.env.NEXT_PUBLIC_API_MOCKING === "true") {
-  //   import("./mocks").then(({ setupMocks }) => {
-  //     setupMocks();
-  //   });
-  // }
+  if (process.env.NEXT_PUBLIC_API_MOCKING === "true") {
+    import("./mocks").then(({ setupMocks }) => {
+      setupMocks();
+    });
+  }
   return (
     <html lang="en">
       <body className={inter.className}>
@@ -40,6 +43,8 @@ export default function RootLayout({
           </div>
         </nav>
         <div className="px-4">
+          <InitMSWClient />
+          <InitMSWServer />
           {/* @ts-expect-error Server Component */}
           <LatestUpdateDate />
           {children}
