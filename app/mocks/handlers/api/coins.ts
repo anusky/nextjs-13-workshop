@@ -3,7 +3,7 @@ const coins = {
   ADA: { name: "Cardano", website: "https://cardano.org" },
   DOT: { name: "Polkadot", website: "https://polkadot.network" },
 };
-export const contactHandlers = [
+export const coinHandlers = [
   rest.get("/coins", (req, res, ctx) => {
     return res(
       ctx.status(200),

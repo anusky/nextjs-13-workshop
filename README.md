@@ -48,11 +48,16 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 - [Pretty Typescript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
 
-
 ### Notes
 
 - [Ts Cheatsheets](https://www.typescriptlang.org/cheatsheets)
 - 
+
+## Using Prisma with SQLite 
+- npx prisma init --datasource-provider sqlite
+- Create User and Todo models
+- npx prisma migrate dev --name initialize
+More Info on [Prisma documentation](https://www.prisma.io/docs/concepts/database-connectors/sqlite)
 
 ## Workshop 4th Session guide
 - Fundamentals are found under `/app/users`
@@ -73,3 +78,6 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   - `/member-profile/1/cache-per-request` -  caching per request and preload pattern with cache()
 - Revalidating
   - LatestUpdateDate from root layout
+- Alpha Actions
+  - `/users` - Through components
+  - `/` Explain how, in example, we would setup a cookie and get it on an Client Component
