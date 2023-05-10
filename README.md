@@ -79,5 +79,5 @@ More Info on [Prisma documentation](https://www.prisma.io/docs/concepts/database
 - Revalidating
   - LatestUpdateDate from root layout
 - Alpha Actions
-  - `/users` - Through components
+  - `/users?user=1` - Through components
   - `/` Explain how, in example, we would setup a cookie and get it on an Client Component

@@ -3,6 +3,7 @@ const fetchLatestUpdateDate = () =>
     method: "GET",
     next: { tags: ["date"] },
   }).then((res) => res.json());
+
 const LatestUpdateDate = async () => {
   const data = await fetchLatestUpdateDate();
   return <div>LatestUpdateDate -- {data.date}</div>;

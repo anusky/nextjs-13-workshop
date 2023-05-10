@@ -18,6 +18,9 @@ type TodosPageProps = {
   };
 };
 const TodosPage = async ({ searchParams }: TodosPageProps) => {
+  if (!searchParams?.user?.length) {
+    return null;
+  }
   const todoList = await fetchUserTodoList(searchParams.user);
 
   async function addTodo(newTodo: { description: string; done: boolean }) {

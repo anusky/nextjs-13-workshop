@@ -24,12 +24,12 @@ const fetchUserPosts: (id: string) => Promise<Post[]> = (id: string) =>
 const MembersPage = async ({ params }: MembersPageProps) => {
   const userInfo = await fetchUser(params.id);
   const userPostList = await fetchUserPosts(params.id);
-  const [info, postList] = await Promise.all([userInfo, userPostList]);
+  // const [info, postList] = await Promise.all([userInfo, userPostList]);
 
   return (
     <div className="grid gap-4 p-8">
-      <h1>User name{info.username}</h1>
-      <PostList list={postList} />
+      <h1>User name{userInfo.username}</h1>
+      <PostList list={userPostList} />
     </div>
   );
 };

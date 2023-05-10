@@ -1,5 +1,6 @@
 "use client";
 
+import { User } from "@prisma/client";
 import Link from "next/link";
 
 const UserListItem = ({ user }: { user: User }) => {

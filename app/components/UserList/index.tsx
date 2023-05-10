@@ -1,3 +1,4 @@
+import { User } from "@prisma/client";
 import UserListItem from "./UserListItem";
 
 type UserListProps = {

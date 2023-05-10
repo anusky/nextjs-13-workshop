@@ -2,9 +2,13 @@ import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 
 /**
+ * @TODO: check why is saving all app status in store
+ */
+
+/**
  * @description revalidate here some fetches with tags
  * @example http://localhost:3000/api/revalidate?tag=date
- * @example http://localhost:3000/api/revalidate?path=http://localhost:3000/api/latest-updated-date
+ * @example http://localhost:3000/api/revalidate?path=http://localhost:3000/api/latest-updated-date/3/
  */
 export async function GET(request: NextRequest) {
   const tag = request.nextUrl.searchParams.get("tag") as string;

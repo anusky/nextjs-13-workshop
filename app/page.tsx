@@ -22,6 +22,7 @@ export default function Home() {
 
   const handleOnClick = () => {
     console.log("henlo");
+
     handleSetupCookies().then((cookie) => {
       if (!cookie.error) {
         setCookie(`name=${cookie.name}; value=${cookie.value}`);

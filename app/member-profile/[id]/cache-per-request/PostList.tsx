@@ -5,6 +5,7 @@ const fetchUserPosts: (id: string) => Promise<Post[]> = cache((id: string) =>
     res.json()
   )
 );
+
 export const preload = (id: string) => {
   // void evaluates the given expression and returns undefined
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/void
