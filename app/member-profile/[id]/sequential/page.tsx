@@ -1,3 +1,4 @@
+import { User } from "@prisma/client";
 import { Suspense } from "react";
 import PostList from "./PostList";
 
