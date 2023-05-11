@@ -48,11 +48,16 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 - [Pretty Typescript Errors](https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors)
 
-
 ### Notes
 
 - [Ts Cheatsheets](https://www.typescriptlang.org/cheatsheets)
 - 
+
+## Using Prisma with SQLite 
+- npx prisma init --datasource-provider sqlite
+- Create User and Todo models
+- npx prisma migrate dev --name initialize
+More Info on [Prisma documentation](https://www.prisma.io/docs/concepts/database-connectors/sqlite)
 
 ## Workshop 4th Session guide
 - Fundamentals are found under `/app/users`
@@ -63,3 +68,29 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
   - `/app/posts` - fetch examples to opt into static/dynamic render
   - `/app/albums` - searchParams examples to opt into static/dynamic render
   - `/app/home` and `/app/get-cookie`- cookies() Dynamic Function usage
+
+## Workshop 5th Session guide
+- Data Fetching types
+  - `/member-profile/1/parallel` - Parallel data fetching
+    - `/member-profile/1/parallel-with-suspense` -  
+  - `/member-profile/1/sequential` -  Sequential data fetching
+- Caching
+  - `/member-profile/1/cache-per-request` -  caching per request and preload pattern with cache()
+- Revalidating
+  - LatestUpdateDate from root layout
+- Alpha Actions
+  - `/users?user=1` - Through components
+  - `/` Explain how, in example, we would setup a cookie and get it on an Client Component
+
+## Workshop 6th Session guide
+- Route Segment Options for SSR
+  - dynamic
+  - dynamicParams
+  - revalidate
+  - fetchCache
+- SSG
+  - `/static-posts` - SSG Example
+- Typescript is it you?
+  - React Component Example - events
+  - Utility Example - unknown
+  - Utility Example - Generics
