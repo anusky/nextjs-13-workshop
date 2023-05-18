@@ -32,6 +32,7 @@ export default function RootLayout({
           <Link href="/sass-module">Sass Modules</Link>
           <Link href="/css-in-js">CSS In JS</Link>
           <Link href="/optimizing">Optimizing</Link>
+          <Link href="/user">Decorators</Link>
         </nav>
         <div className={` px-4`}>{children}</div>
         {/* <Script

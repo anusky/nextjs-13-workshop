@@ -30,8 +30,6 @@ const UserPage = () => {
   return (
     <div className="font-inter">
       <button onClick={handleOnClickGetName}>Update</button>
-
-      <h2>caca</h2>
     </div>
   );
 };

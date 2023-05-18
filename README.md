@@ -123,3 +123,5 @@ More Info on [Prisma documentation](https://www.prisma.io/docs/concepts/database
   - `app/css-modules/page.tsx` 
 - Sass Module
   - `app/sass-module/page.tsx` 
+- Decorators
+  - `app/user/page.tsx` 
