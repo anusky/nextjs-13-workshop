@@ -1,9 +1,8 @@
-import { Inter } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import { inter } from "./fonts";
+import "./globals.css";
 
 export const metadata = {
   title: "Create Next App",
@@ -17,18 +16,28 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body
+        className={` ${inter.className} grid gap-y-4`}
+        // className={`${arquitectsDaughter.className} ${inter.className} grid gap-y-4`}
+      >
         <h1>Hola soy GROOT Layout</h1>
         <nav className="navbar">
           NextJs 13 Workshop
           <Link href="/">
             <Image alt="Logo" src="/yoshi.png" width={50} height={50} />
           </Link>
-          <div className="">
-            <Link href="/users">Users</Link>
-          </div>
+          <Link href="/custom-css">Custom CSS page</Link>
+          <Link href="/css-modules">CSS Modules page</Link>
+          <Link href="/tailwind-css">Tailwind CSS</Link>
+          <Link href="/sass-module">Sass Modules</Link>
+          <Link href="/css-in-js">CSS In JS</Link>
+          <Link href="/optimizing">Optimizing</Link>
         </nav>
-        <div className="px-4">{children}</div>
+        <div className={` px-4`}>{children}</div>
+        {/* <Script
+          src="https://example.com/script.js"
+          strategy="afterInteractive"
+        /> */}
       </body>
     </html>
   );

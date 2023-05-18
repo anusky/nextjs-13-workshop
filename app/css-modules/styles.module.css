@@ -1,0 +1,15 @@
+.cssModulesPageContainer {
+  padding: 1rem;
+  display: grid;
+  row-gap: 1.5rem;
+  border: 2px solid deeppink;
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.button {
+  @apply bg-slate-900 py-2 px-4 text-purple-100;
+}
+.button:hover {
+  @apply bg-purple-950;
+}

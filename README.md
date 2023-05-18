@@ -94,3 +94,32 @@ More Info on [Prisma documentation](https://www.prisma.io/docs/concepts/database
   - React Component Example - events
   - Utility Example - unknown
   - Utility Example - Generics
+  - 
+## Workshop 7th Session guide
+- Config-based Metadata
+  - `app/posts` as static metadata example
+  - `app/posts/[id]` as dynamic metadata example
+- not found example under posts/id
+  - `app/posts/2` 
+- redirect example under posts/id
+  - `app/posts/3` 
+- useParams, usePathname, useSearchparams and WebVitals example under posts/id
+  - `app/posts/[id]/page.tsx` 
+  - `app/posts/[id]/layout.tsx` 
+- useParams, usePathname and WebVitals example under posts/id
+  - `app/posts/[id]/page.tsx` 
+  - `app/posts/[id]/layout.tsx` 
+- useSelectedLayoutSegment, useSelectedLayoutSegments example under Root Layout
+  - `app/layout.tsx` 
+
+## Workshop 8th Session guide
+- Global CSS
+  - `app/layout` containing the global one
+  - `app/custom-css/page.tsx` containing custom css
+- CSS Modules
+  - `app/css-modules/page.tsx` 
+    - merge between css modules and tailwindcss
+- Tailwind CSS
+  - `app/css-modules/page.tsx` 
+- Sass Module
+  - `app/sass-module/page.tsx` 

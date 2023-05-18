@@ -1,0 +1,10 @@
+body {
+  background: wheat;
+  background-repeat: no-repeat;
+}
+.custom-css-page-container {
+  display: grid;
+  place-items: center;
+  height: 50vh;
+  background-color: tomato;
+}
